@@ -1,0 +1,27 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    {{ title }}
+  </h1>
+</div>
+<div class="col-md-3">
+  <div class="row">
+    <input class="form-control" type='file' (change)='convertFile(input)' id='fileInput' #input>
+  </div>
+
+  <div class="row">
+    <ngx-charts-line-chart *ngIf="showChart"
+      [view]="view"
+      [results]="dataSets"
+      [gradient]="gradient"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="showLegend"
+      [showXAxisLabel]="showXAxisLabel"
+      [showYAxisLabel]="showYAxisLabel"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel"
+      [autoScale]="autoScale">
+    </ngx-charts-line-chart>
+  </div>
+</div>
